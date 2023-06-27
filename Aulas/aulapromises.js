@@ -1,4 +1,3 @@
-
 /* função de randomizar o tempo, onde sempre vair gerar em ordem aleatória os times*/
 
 function rand(min, max) {
@@ -12,7 +11,7 @@ function esperaAi(msg, tempo) {
     return new Promise((resolve, reject) => {
         if(typeof msg !== 'string') reject('BAD VALUE');
         setTimeout(() => {
-        resolve(msg);
+            resolve(msg);
     }, tempo);
  });
 }
@@ -27,7 +26,7 @@ function esperaAi(msg, tempo) {
  /* novamente, requisa a resposta para a função acima*/
  .then(resposta => {
     console.log(resposta);
-    return esperaAi(2222, rand(1, 10));
+    return esperaAi('depurando dados da base', rand(1, 10));
  })
 .then(resposta => {
     console.log(resposta);
