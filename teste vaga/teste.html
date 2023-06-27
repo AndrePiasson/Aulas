@@ -1,0 +1,61 @@
+<html>
+    <head>
+    <title>ViaCEP Webservice</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+<!uma head basica para a pagina>
+    <body>
+        <script src="teste.js"></script> <! abertura linkando o scrip em js>
+        
+        <!aqui vai constar todas as informações cadastrais solicitadas>
+        <fieldset>
+          <legend> Dados Essenciais </legend>
+      <form method="get" action=".">
+        <label>Nome:
+          <input name="Nome" type="text" id="Nome" size="60" required placeholder="Nome completo"/></label><br />
+          <label>CPF ou CNPJ:
+            <input name="CPF" type="text" id="CPF" size="60" required placeholder="111.111.111-11"/></label>
+            <label>telefone:
+              <input name="telefone" type="tel" id="telefone" size="60"required placeholder="(+55)47 9 8901-5067"/></label><br />
+              <label>Email:
+                <input name="email" type="email" id="email" size="60" required placeholder="email@email.com"/></label><br />
+        <label>Cep:
+        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+               onblur="pesquisacep(this.value);"required /></label><br />
+        <label>Rua:
+        <input name="rua" type="text" id="rua" size="60" required/></label><br />
+        <label>Bairro:
+        <input name="bairro" type="text" id="bairro" size="40" required/></label><br />
+        <label>Cidade:
+        <input name="cidade" type="text" id="cidade" size="40" required/></label><br />
+        <label>Estado:
+        <input name="uf" type="text" id="uf" size="2" required/></label><br /> 
+        <label>Enviar:
+          <input name="submit" type="submit" id="submit" size="2" /></label> 
+          <input type="reset">
+      </form>
+    </fieldset>
+
+    <! aqui fica a parte de pagamento, usei um pouco de javascrip para fazer que só fossem visiveis os campos, se selecionado a opção de cartao de crédito>
+    <fieldset>
+    <title>Escolha de Pagamento</title>
+    <h2>Escolha o método de pagamento:</h2>
+    <select id="opcao" onchange="exibirCampos()">
+      <option value="boleto">Boleto</option>
+      <option value="cartao">Cartão de Crédito</option>
+    </select>
+
+    <div id="campo-cartao" style="display: none">
+      <h3>Informações do Cartão de Crédito:</h3>
+      <label>Número do Cartão:</label>
+      <input type="text" /><br />
+      <label>Nome do Titular:</label>
+      <input type="text" /><br />
+      <label>Data de Validade (MM/AA):</label>
+      <input type="text" /><br />
+      <label>Código de Segurança:</label>
+      <input type="text" /><br />
+    </div>
+  </fieldset>
+
+    </html>
