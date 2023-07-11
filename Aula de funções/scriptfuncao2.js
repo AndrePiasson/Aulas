@@ -24,10 +24,10 @@ function divide(x, y) {
 
 //Outro metodo de criar funções é criando ela dentro da própria variavel
 
-const raiz = function (n) {
+const raiz2 = function (n) {
     return n ** 0.5;
 };
-console.log(raiz(9));
+console.log(raiz2(9));
 
 // outro metodo mais moderno e recente, é usarmos arrow function, simplificando bastante e otimizando
 
