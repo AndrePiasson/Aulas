@@ -1,2 +1,2 @@
 # Aulas
-Aulas de Java Básico
+Aulas de Java Script Básico
